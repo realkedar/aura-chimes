@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #282828;
+}
+
+h1, h2, p{
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.login-btn, .playlist-btn, .create-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.login-btn:hover, .playlist-btn:hover, .create-btn:hover {
+    background-color: #1aa34a;
+}

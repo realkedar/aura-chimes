@@ -13,7 +13,7 @@ def get_weather():
 
     if response.status_code == 200:
         weather = weather_data['data']['items'][0]['forecasts'][0]['forecast']
-        return {"weather": weather}
+        return weather
     else:
         return {"error": "Failed to fetch weather"}
     
