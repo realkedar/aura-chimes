@@ -16,7 +16,7 @@ def ai_rec(weather:str, genres:list):
   model = genai.GenerativeModel(
     model_name="gemini-2.0-flash-exp",
     generation_config=generation_config,
-    system_instruction="You will be given the current weather and top genres. Your job is to give me a list of 40-90 songs that are appropriate to the weather and the genres that are listened to. The output must be in a python list format where each item is the title of the song. For example, if the weather is sunny and top genres are [synthwave, electronic], your answer should be in the format of [\"memory reboot\", \"fainted\"]. Do not include the artist in the title of the song. Do not write any text other than the python list.",
+    system_instruction="You will be given the current weather and top genres. Your job is to give me a list of 40-90 distinct, unique songs that are appropriate to the weather and the user's top genres. The output must be in a python list format where each item is the title of the song. Ensure there are no duplicate song titles. For example, if the weather is sunny and top genres are [synthwave, electronic], your answer should be in the format of ['memory reboot', 'fainted']. Do not include the artist in the title of the song. Do not write any text other than the python list.",
   )
 
   chat_session = model.start_chat(
